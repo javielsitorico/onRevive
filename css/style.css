@@ -5,8 +5,8 @@
      --secundario: #51754f;
      --secundario-claro: #9eda9b;
      --gris-claro: #E4E4E4;
-     --blacno: #FFFFFF;
-     --negro: #000000;
+     --blacno: #F5F5F5;
+     --negro: #111111;
 }
 
 * {
@@ -18,7 +18,7 @@ body {
 }
 
 img {
-     width: 100%;
+     max-width: 100%;
      height: auto;
 }
 
@@ -63,7 +63,7 @@ img {
      color: var(--secundario-claro);
 }
 
-@media (max-width: 758px) {
+@media (max-width: 768px) {
      .cabecera {
           display: flex;
           flex-direction: column;
@@ -143,7 +143,8 @@ img {
 }
 .articulo {
      display: grid;
-     gap: 20px;
+     row-gap: 20px;
+     column-gap: 40px;
      align-items: center;
      justify-content: center;
      grid-template-columns: 4fr 3fr;
@@ -194,14 +195,14 @@ img {
      font-size: 20;
      color: var(--gris-claro);
 }
-.imagen-aside {
+.contenido-lateral img {
      width: 100%;
      height: auto;
      max-width: 480px;
      padding: 10px;
 }
 
-@media (max-width: 972px) {
+@media (max-width: 1024px) {
      .seccion-principal {
           display: flex;
           flex-direction: column;
@@ -221,20 +222,57 @@ img {
 }
 
 /* Contenido Cursos */
-.seccion-principal-cursos {
+
+.seccion-cursos {
+     padding: 40px;
+     background-color: var(--gris-claro);
+}
+
+.seccion-cursos .titulo-cursos {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 10px;
+}
+
+.seccion-cursos .titulo-cursos h2 {
+     font-size: 32px;
+}
+
+.seccion-cursos .titulo-cursos span {
+     height: 1px;
+     background-color: var(--principal);
+     flex: 1;
+}
+
+.contenedor-cursos {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     padding: 40px;
      gap: 20px;
-     background-color: var(--gris-claro);
+}
+
+@media (max-width: 1024px) {
+     .contenedor-cursos {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+
+@media (max-width: 768px) {
+     .contenedor-cursos {
+          grid-template-columns: 1fr;
+     }
+     .seccion-cursos .titulo-cursos{
+          justify-content: center;
+     }
+     .seccion-cursos .titulo-cursos span {
+          flex: 0;
+     }
 }
 .curso {
      background-color: var(--blacno);
      padding: 15px;
-     max-width: 600px;
-}
-.imagen-curso {
-     max-width: 600px;
+     margin: 0 auto;
 }
 .nombre-curso {
      font-size: 24px;
@@ -246,11 +284,11 @@ img {
 .compra {
      display: flex;
      flex-direction: row;
-     justify-content: flex-end;
+     justify-content: space-between;
      gap: 20px;
 }
 .precio-curso {
-     font-size: 20px;
+     font-size: 28px;
      font-weight: bold;
      color: var(--secundario);
 }
