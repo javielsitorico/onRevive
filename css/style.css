@@ -5,7 +5,7 @@
      --secundario: #51754f;
      --secundario-claro: #9eda9b;
      --gris-claro: #E4E4E4;
-     --blacno: #F5F5F5;
+     --blanco: #F5F5F5;
      --negro: #111111;
 }
 
@@ -244,8 +244,7 @@ a {
 }
 
 .seccion-cursos .titulo-cursos span {
-     height: 1px;
-     background-color: rgba(0, 0, 0, 0.3);
+     border-top: 1.5px solid rgba(0, 0, 0, 0.3);
      flex: 1;
 }
 
@@ -274,7 +273,7 @@ a {
      }
 }
 .curso {
-     background-color: var(--blacno);
+     background-color: var(--blanco);
      padding: 15px;
      margin: 0 auto;
      display: flex;
@@ -309,7 +308,7 @@ a {
      border: none;
      height: fit-content;
      padding: 10px 25px;
-     color: var(--blacno);
+     color: var(--blanco);
      font-weight: bold;
      font-size: 20px;
      transition: all ease .3s;
@@ -359,6 +358,9 @@ a {
      .curso-comprar--informacion h3 {
           font-size: 30px;
      }
+     .curso-comprar--informacion .compra {
+          margin-top: 20px;
+     }
 }
 
 .curso-comprar--informacion h4 {
@@ -378,9 +380,7 @@ a {
      margin: auto 0 0 auto;
 }
 
-.curso-comprar--informacion .boton-compra-curso {
-     margin-top: 15px;
-}
+
 
 .seccion-cursos-recomendados {
      max-width: 90%;
@@ -421,6 +421,41 @@ a {
 
 .seccion-cursos-recomendados .contenedor-cursos .curso .compra {
      justify-content: flex-end;
+}
+
+/* Contenido tienda */
+
+.seccion-tienda {
+     display: grid;
+     grid-template-columns: 1fr 3.5fr;
+}
+
+.seccion-tienda aside {
+     border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.seccion-tienda aside li {
+     list-style-type: none;
+     margin-top: 15px;
+}
+.seccion-tienda aside .lista-principal>li:first-child {
+     margin-top: 0;
+}
+
+.seccion-tienda aside .lista-principal>li {
+     font-size: 24px;
+     font-weight: 700;
+}
+
+.seccion-tienda aside .lista-secundaria li {
+     padding: 10px 15px;
+     transition: all ease .3s;
+     cursor: pointer;
+}
+
+.seccion-tienda aside .lista-secundaria li:hover {
+     background-color: var(--secundario);
+     color: var(--blanco);
 }
 
 /* Footer */
