@@ -245,7 +245,7 @@ a {
 
 .seccion-cursos .titulo-cursos span {
      height: 1px;
-     background-color: var(--principal);
+     background-color: rgba(0, 0, 0, 0.3);
      flex: 1;
 }
 
@@ -337,6 +337,15 @@ a {
      aspect-ratio: 1;
      object-fit: cover;
 }
+@media (max-width: 1024px) {
+     .curso-comprar {
+          flex-direction: column;
+     }
+     .curso-comprar img {
+          max-width: 100%;
+          aspect-ratio: 16 / 9;
+     }
+}
 .curso-comprar--informacion {
      display: flex;
      flex-direction: column;
@@ -346,9 +355,15 @@ a {
      font-size: 38px;
      font-weight: 800;
 }
+@media (max-width: 768px) {
+     .curso-comprar--informacion h3 {
+          font-size: 30px;
+     }
+}
 
 .curso-comprar--informacion h4 {
      margin-bottom: 4px;
+     margin-top: 10px
 }
 
 .curso-comprar--informacion ul {
@@ -361,6 +376,51 @@ a {
 
 .curso-comprar--informacion a {
      margin: auto 0 0 auto;
+}
+
+.curso-comprar--informacion .boton-compra-curso {
+     margin-top: 15px;
+}
+
+.seccion-cursos-recomendados {
+     max-width: 90%;
+     margin: 0 auto;
+     padding: 0  20px 20px 20px;
+     border-top: 1.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.seccion-cursos-recomendados h4 {
+     font-size: 38px;
+     font-weight: 700;
+     margin: 25px 0;
+}
+
+.seccion-cursos-recomendados .contenedor-cursos {
+     grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+     .seccion-cursos-recomendados .contenedor-cursos {
+          grid-template-columns: repeat(3, 1fr);
+     }
+}
+
+@media (max-width: 768px) {
+     .seccion-cursos-recomendados .contenedor-cursos {
+          grid-template-columns: 1fr;
+     }
+     .seccion-cursos-recomendados .contenedor-cursos .curso {
+          max-width: 300px;
+          margin: 0 auto;
+     }
+}
+
+.seccion-cursos-recomendados .contenedor-cursos .curso .nombre-curso {
+     text-align: left;
+}
+
+.seccion-cursos-recomendados .contenedor-cursos .curso .compra {
+     justify-content: flex-end;
 }
 
 /* Footer */
