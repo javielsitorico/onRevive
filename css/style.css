@@ -428,10 +428,11 @@ a {
 .seccion-tienda {
      display: grid;
      grid-template-columns: 1fr 3.5fr;
+     background-color: var(--gris-claro);
 }
 
 .seccion-tienda aside {
-     border-right: 1px solid rgba(0, 0, 0, 0.2);
+     background-color: var(--blanco);
 }
 
 .seccion-tienda aside li {
@@ -456,6 +457,14 @@ a {
 .seccion-tienda aside .lista-secundaria li:hover {
      background-color: var(--secundario);
      color: var(--blanco);
+}
+
+.tienda-contenedor-productos {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
 }
 
 /* Footer */
