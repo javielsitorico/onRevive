@@ -3,7 +3,6 @@
 :root {
      --principal: #151515;
      --secundario: #51754f;
-     --secundario-claro: #9eda9b;
      --gris-claro: #E4E4E4;
      --blanco: #F5F5F5;
      --negro: #111111;
@@ -73,7 +72,7 @@ a {
      transition: all .3s ease;
 }
 .enlace:hover {
-     color: var(--secundario-claro);
+     color: var(--secundario);
 }
 
 @media (max-width: 768px) {
@@ -443,34 +442,34 @@ a {
      background-color: var(--gris-claro);
 }
 
-.seccion-tienda aside {
+.navegacion-secciones {
      background-color: var(--blanco);
 }
 
-.seccion-tienda aside li {
+.navegacion-secciones li {
      list-style-type: none;
      margin-top: 15px;
 }
-.seccion-tienda aside .lista-principal {
+.navegacion-secciones .lista-principal {
      margin-top: 40px;
      padding-left: 30px;
 }
-.seccion-tienda aside .lista-principal>li:first-child {
+.navegacion-secciones .lista-principal>li:first-child {
      margin-top: 0;
 }
 
-.seccion-tienda aside .lista-principal>li {
+.navegacion-secciones .lista-principal>li {
      font-size: 24px;
      font-weight: 700;
 }
 
-.seccion-tienda aside .lista-secundaria li {
+.navegacion-secciones .lista-secundaria li {
      padding: 10px 15px;
      transition: all ease .3s;
      cursor: pointer;
 }
 
-.seccion-tienda aside .lista-secundaria li:hover {
+.navegacion-secciones .lista-secundaria li:hover {
      background-color: var(--secundario);
      color: var(--blanco);
 }
@@ -512,6 +511,29 @@ a {
      }
 }
 
+@media (max-width: 1024px) {
+     .seccion-tienda {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 30px;
+     }
+     .tienda-productos {
+          max-width: 768px;
+          margin: 0 auto;
+     }
+     .tienda--contenedor-productos {
+          gap: 30px;
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 768px) {
+     .tienda--contenedor-productos {
+          gap: 30px;
+          grid-template-columns: 1fr;
+     }
+}
+
 .tienda--contenedor-productos .producto  {
      background-color: var(--blanco);
      display: flex;
@@ -524,8 +546,7 @@ a {
 }
 
 .tienda--contenedor-productos .producto .informacion-producto {
-     padding: 20px;
-
+     padding: 15px;
      display: flex;
      flex-direction: column;
      justify-content: flex-end;
