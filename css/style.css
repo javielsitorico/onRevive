@@ -34,6 +34,11 @@ a {
      text-decoration: line-through;
 }
 
+.imagen-redonda {
+     border-radius: 100%;
+     height: fit-content;
+}
+
 /* Cabecera */
 
 .cabecera {
@@ -570,6 +575,149 @@ a {
 
 .tienda--contenedor-productos .producto .num-valoraciones {
      color: rgba(0, 0, 0, 0.4);
+}
+
+/* Contenido Producto */
+
+.seccion-producto .producto,
+.seccion-producto .valoraciones {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 30px;
+}
+
+.seccion-producto .producto {
+     display: grid;
+     grid-template-columns: 1fr 2fr;
+     gap: 50px;
+}
+
+.seccion-producto .producto img {
+     position: sticky;
+     top: 30px;
+     aspect-ratio: 1;
+     object-fit: contain;
+     border: 1px solid var(--gris-claro);
+     border-radius: 5px;
+     margin-bottom: 10px;
+}
+.seccion-producto .producto .producto--info h3 {
+     font-size: 36px;
+     font-weight: 800;
+     margin-bottom: 10px;
+     margin-top: 0;
+}
+.seccion-producto .producto .producto--info h4 {
+     font-size: 24px;
+     font-weight: 800;
+     margin-bottom: 10px;
+     margin-top: 0;
+}
+.seccion-producto .producto .producto--info .precio {
+     color: var(--secundario);
+     font-weight: 800;
+     font-size: 28px;
+     margin: 5px 0;
+}
+.seccion-producto .producto .producto--info span {
+     font-weight: 400;
+     font-size: 16px;
+}
+.seccion-producto .producto .producto--info .valoracion {
+     font-size: 18px;
+     font-weight: 600;
+}
+
+.seccion-producto .producto .producto--info .caracteristicas li+li {
+     padding-top: 10px;
+}
+
+.seccion-producto .valoraciones {
+     border-top: 1px solid rgba(0, 0, 0, 0.3)
+}
+
+.seccion-producto .valoraciones h3 {
+     font-size: 32px;
+     font-weight: 800;
+     margin: 0;
+}
+
+.seccion-producto .valoraciones p.valoraciones--subtitulo {
+     color: rgba(0, 0, 0, 0.4);
+     margin: 0 0 20px 0;
+}
+
+.seccion-producto .valoraciones {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion {
+     display: flex;
+     flex-direction: row;
+     gap: 30px;
+     border: 1px solid rgba(0, 0, 0, 0.2);
+     border-radius: 10px;
+     padding: 20px;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion {
+     flex: 1;
+
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     gap: 20px;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario>p {
+     font-weight: 700;
+     font-size: 24px;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario img {
+     max-width: 35px;
+     aspect-ratio: 1;
+     object-fit: contain;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario .informacion-usuario--valoracion {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario .informacion-usuario--valoracion img {
+     max-width: 23px;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .fecha-publicacion {
+     color: rgba(0, 0, 0, 0.4);
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--ajustes {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--ajustes img {
+     max-width: 35px;
+     cursor: pointer;
+}
+
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--ajustes img:nth-child(1) {
+     transform: rotate(90deg);
+}
+.seccion-producto .valoraciones .contenedor-valoracion .valoracion--ajustes img:nth-child(3) {
+     transform: rotate(270deg);
 }
 
 /* Footer */
