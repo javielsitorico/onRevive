@@ -591,7 +591,6 @@ a {
      grid-template-columns: 1fr 2fr;
      gap: 50px;
 }
-
 .seccion-producto .producto img {
      position: sticky;
      top: 30px;
@@ -601,6 +600,20 @@ a {
      border-radius: 5px;
      margin-bottom: 10px;
 }
+
+@media (max-width: 1024px) {
+     .seccion-producto .producto {
+          display: flex;
+          flex-direction: column;
+     }
+     .seccion-producto .producto img {
+          position: static;
+          max-width: 600px;
+          width: 100%;
+          margin: 0 auto;
+     }
+}
+
 .seccion-producto .producto .producto--info h3 {
      font-size: 36px;
      font-weight: 800;
@@ -718,6 +731,20 @@ a {
 }
 .seccion-producto .valoraciones .contenedor-valoracion .valoracion--ajustes img:nth-child(3) {
      transform: rotate(270deg);
+}
+
+@media (max-width: 768px) {
+     .seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion {
+          font-size: 15px;
+     }
+     .seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario {
+          flex-direction: column;
+          align-items: start;
+     }
+     .seccion-producto .valoraciones .contenedor-valoracion .valoracion--informacion .informacion-usuario p {
+          margin: 0;
+          font-size: 22px;
+     }
 }
 
 /* Footer */
