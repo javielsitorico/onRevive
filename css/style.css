@@ -578,7 +578,6 @@ a {
 }
 
 /* Contenido Producto */
-
 .seccion-producto .producto,
 .seccion-producto .valoraciones {
      max-width: 1200px;
@@ -745,6 +744,19 @@ a {
           margin: 0;
           font-size: 22px;
      }
+}
+
+/* Contenido Formulario */
+
+.seccion-contacto {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0 auto;
+}
+
+.seccion-contacto h2 {
+     font-size: 32px;
+     font-weight: 800;
 }
 
 /* Footer */
